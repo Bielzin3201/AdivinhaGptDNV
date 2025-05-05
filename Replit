@@ -1,0 +1,29 @@
+using System;
+
+class Program
+{
+    public static void Main()
+    {
+        Random random = new Random();
+        int numeroAle = random.Next(1, 11);
+
+        Console.Write("Tente adivinhar o número que o computador escolheu de 1 a : ");
+        int numeroJogador = Convert.ToInt32(Console.ReadLine());
+
+        if (numeroJogador < 1 || numeroJogador > 10)
+        {
+            Console.WriteLine("O número escolhido não está entre 1 e 10. Tente novamente.");
+        }
+        else
+        {
+            if (numeroJogador == numeroAle)
+            {
+                Console.WriteLine("Parabéns, você acertou em cheio!");
+            }
+            else
+            {
+                Console.WriteLine($"Você errou. O número era {numeroAle}.");
+            }
+        }
+    }
+}
