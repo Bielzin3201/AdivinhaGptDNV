@@ -7,7 +7,7 @@ class Program
         Random random = new Random();
         int numeroAle = random.Next(1, 11);
 
-        Console.Write("Tente adivinhar o número que o computador escolheu de 1 a : ");
+        Console.Write("Tente adivinhar o número que o computador escolheu de 1 a 10: ");
         int numeroJogador = Convert.ToInt32(Console.ReadLine());
 
         if (numeroJogador < 1 || numeroJogador > 10)
